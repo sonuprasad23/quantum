@@ -173,7 +173,8 @@ def handle_otp(data):
     if is_success:
         emit('login_successful')
         session_id = 'user_session'
-        socketio.start_background_task(target=run_automation_process, args=(session_id,))
+        # FIXED: Correct syntax for start_background_task
+        socketio.start_background_task(run_automation_process, session_id)
     else: emit('error', {'message': f'OTP failed: {error_message}'})
 
 @socketio.on('terminate_process')
