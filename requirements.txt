@@ -1,0 +1,10 @@
+pandas
+Flask
+Flask-SocketIO
+Flask-Cors
+eventlet
+python-dotenv
+selenium
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
